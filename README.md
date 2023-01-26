@@ -5,7 +5,7 @@ Project to learn about Black Scholes Equation to price European non-dividend pay
 
 Obtain risk free rate from US 10 year bond
 ```
-rf_ticker = yf.Ticker("DE0001135275:BUND")  # use 10 year German bond for European risk free rate "DE0001135275:BUND" # 10 Year Treasury US "^TNX"
+rf_ticker = yf.Ticker("DE0001135275:BUND")  # use 10 year German bond to emulate European risk free rate "DE0001135275:BUND" # 10 Year Treasury US "^TNX"
 info = rf_ticker.info
 r = (info['regularMarketPrice']) / 100  # obtaining risk free rate
 ```
@@ -82,7 +82,8 @@ Using Newton Raphson root finding method to find implied volatility where the pa
     plt.title('Option Price Vs Strike Price')
     plt.legend()
     plt.show()
- 
+    
+ graph_calc("RDS-A",'p') # Royal Dutch Shell plc is a European Non Dividend paying stock
  ```
  
  # Future Improvements
