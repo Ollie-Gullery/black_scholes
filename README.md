@@ -1,5 +1,5 @@
 # black_scholes
-Project to learn about Black Scholes Equation to price European non-dividend paying option
+Project to learn about Black Scholes Equation to price European non-dividend paying options
 
 # Project Summary
 
