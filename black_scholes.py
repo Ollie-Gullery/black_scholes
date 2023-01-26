@@ -8,7 +8,7 @@ from datetime import datetime
 from datetime import date
 
 # obtain the risk free rate
-rf_ticker = yf.Ticker("DE0001135275:BUND")  # 10 German Bond used to emulate risk free rate
+rf_ticker = yf.Ticker("DE0001135275:BUND")  # 10 Year German Bond used to emulate risk free rate
 info = rf_ticker.info
 r = (info['regularMarketPrice']) / 100  # obtaining risk free rate
 
