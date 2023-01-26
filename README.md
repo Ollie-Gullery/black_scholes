@@ -85,7 +85,7 @@ def black_scholes(self, option_type, S0, K, T, r, sigma):
     
  graph_calc("RDS-A",'p') # Royal Dutch Shell plc is a European Non Dividend paying stock
  ```
- Librares Use: `scipy`, `numpy`, `matplotlib`, `py_vollib`, `yfinance`
+Libraries Use: `scipy`, `numpy`, `matplotlib`, `py_vollib`, `yfinance`
  
  # Future Improvements
  * Learn to implement dividends to price dividend paying options
