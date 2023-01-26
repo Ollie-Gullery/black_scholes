@@ -3,7 +3,7 @@ Project to learn about Black Scholes Equation to price European non-dividend pay
 
 # Project Summary
 
-#### Obtain risk free rate from US 10 year bond
+#### Obtain risk free rate from German 10 year bond
 ```python
 rf_ticker = yf.Ticker("DE0001135275:BUND")  # use 10 year German bond to emulate European risk free rate "DE0001135275:BUND" # 10 Year Treasury US "^TNX"
 info = rf_ticker.info
