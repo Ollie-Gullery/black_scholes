@@ -85,6 +85,7 @@ Using Newton Raphson root finding method to find implied volatility where the pa
     
  graph_calc("RDS-A",'p') # Royal Dutch Shell plc is a European Non Dividend paying stock
  ```
+ Librares Use: `scipy`, `numpy`, `matplotlib`, `py_vollib`, `yfinance`
  
  # Future Improvements
  * Learn to implement dividends to price dividend paying options
