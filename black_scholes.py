@@ -8,7 +8,7 @@ from datetime import datetime
 from datetime import date
 
 # obtain the risk free rate
-rf_ticker = yf.Ticker("^TNX")  # 10 Year Treasury US
+rf_ticker = yf.Ticker("DE0001135275:BUND")  # 10 German Bond used to emulate risk free rate
 info = rf_ticker.info
 r = (info['regularMarketPrice']) / 100  # obtaining risk free rate
 
@@ -63,9 +63,9 @@ class Vol:
         return implied_vol
 
 
+
 def get_market_price(ticker):
     # obtains the stock price of the ticker
-    # step 2. finetune according to brownian motion
     stock = yf.Ticker(ticker)
     price = stock.info["regularMarketPrice"]
     return price
@@ -77,7 +77,7 @@ def calculate_T(expiration_date, current_date):
     T = (expiration_date - current_date).days / 365
     return T
 
-def graph_calc(ticker, option_type = 'c'): # WKHS
+def graph_calc(ticker, option_type = 'c'):
     vol = Vol(ticker)
     tick = yf.Ticker(ticker)
     option_dates = tick.options
@@ -107,7 +107,7 @@ def graph_calc(ticker, option_type = 'c'): # WKHS
     plt.legend()
     plt.show()
 
-graph_calc("AMZN",'p')
+graph_calc("RDS-A",'p') # Royal Dutch Shell plc is a European Non Dividend paying stock
 
 
 
