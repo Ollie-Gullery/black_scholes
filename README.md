@@ -3,7 +3,7 @@ Project to learn about Black Scholes Equation to price European non-dividend pay
 
 # Project Summary
 
-Obtain risk free rate from US 10 year bond
+#### Obtain risk free rate from US 10 year bond
 ```python
 rf_ticker = yf.Ticker("DE0001135275:BUND")  # use 10 year German bond to emulate European risk free rate "DE0001135275:BUND" # 10 Year Treasury US "^TNX"
 info = rf_ticker.info
@@ -11,7 +11,7 @@ r = (info['regularMarketPrice']) / 100  # obtaining risk free rate
 ```
 
 
-Black Scholes Python Implementation
+#### Black Scholes Python Implementation
 ```python
 def black_scholes(self, option_type, S0, K, T, r, sigma):
     # flag, S0, K, T, r, vol_old
@@ -38,7 +38,7 @@ def black_scholes(self, option_type, S0, K, T, r, sigma):
         print('Please confirm all parameters are correct')
  ```
  
-Using Newton Raphson root finding method to find implied volatility where the partial derivative of the formula in terms of impled volatility (vega) is f'(x) 
+#### Using Newton Raphson root finding method to find implied volatility where the partial derivative of the formula in terms of impled volatility (vega) is f'(x) 
  ```python
  def implied_vol(self, S0, K, T, r, market_price, flag='c', precision=0.00001):
     max_iter = 200  # max no. of iterations, no convergence = no defined zero with function specifed
@@ -59,7 +59,7 @@ Using Newton Raphson root finding method to find implied volatility where the pa
     return implied_vol
  
  ```
- Plotting Black Scholes vs Strike Price -> Graph shows as strike increases call option price decreases
+ #### Plotting Black Scholes vs Strike Price -> Graph shows as strike increases call option price decreases
  ```python
  def graph_calc(ticker, option_type = 'c'):
     vol = Vol(ticker)
