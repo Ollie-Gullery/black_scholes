@@ -39,6 +39,8 @@ def black_scholes(self, option_type, S0, K, T, r, sigma):
  ```
  
 #### Using Newton Raphson root finding method to find implied volatility where the partial derivative of the formula in terms of impled volatility (vega) is f'(x) 
+<img width="50" alt="image" src="https://user-images.githubusercontent.com/115392875/215055507-fd1696f9-0803-42a8-b2fc-b1874d933abd.png">
+
  ```python
  def implied_vol(self, S0, K, T, r, market_price, flag='c', precision=0.00001):
     max_iter = 200  # max no. of iterations, no convergence = no defined zero with function specifed
